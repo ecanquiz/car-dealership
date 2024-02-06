@@ -33,7 +33,7 @@ export class CarsController {
     @Param('id', ParseUUIDPipe) id: string,
     @Body() updateCarDTO: UpdateCarDTO ) {
   
-    return updateCarDTO;
+    return this.carsService.update(id, updateCarDTO);
   }
 
   @Delete(':id')
