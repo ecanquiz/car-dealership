@@ -48,6 +48,11 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Populate DB
+```
+http://localhost:3000/seed
+```
+
 ## Test
 
 ```bash
@@ -74,4 +79,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
 

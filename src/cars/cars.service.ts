@@ -3,7 +3,6 @@ import { v4 as uuid } from 'uuid'
 import { Car } from './interfaces/car.interface';
 import { CreateCarDTO, UpdateCarDTO } from './dto'
 
-
 @Injectable()
 export class CarsService {
 

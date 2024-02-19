@@ -1,14 +1,23 @@
 import { Injectable } from '@nestjs/common';
+import { CarsService } from 'src/cars/cars.service';
+import { BrandsService } from 'src/brands/brands.service';
+
 import { CARDS_SEED } from './data/cars.seed';
-import { BRANDS_SEED } from './data/brans.seed';
+import { BRANDS_SEED } from './data/brands.seed';
 
 @Injectable()
 export class SeedService {
 
-  populateDB() {
+  constructor (
+    private readonly carsService: CarsService,
+    private readonly brandsService: BrandsService,
 
-    //CARDS_SEED;
-    //BRANDS_SEED;
+  ) { }
+
+  populateDB() {
+    this.carsService.fillCarsWithSeedData(CARDS_SEED);
+    this.brandsService.fillBrandsWithSeedData(BRANDS_SEED);
+
     return "Seed executed successfully";
   }
 
